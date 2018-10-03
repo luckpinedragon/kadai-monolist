@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   delete 'destroy_want', to: 'ownerships#destroy_want'
   post 'create_have', to: 'ownerships#create_have'
   delete 'destroy_have', to: 'ownerships#destroy_have'
+
+  get 'rankings/want', to: 'rankings#want'
 end
