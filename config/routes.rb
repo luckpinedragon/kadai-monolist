@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create]
 
   resources :items, only: [:show, :new]
-  resources :ownerships, only: [:create, :destroy]
+
+  post 'create_want', to: 'ownerships#create_want'
+  delete 'destroy_want', to: 'ownerships#destroy_want'
+  post 'create_have', to: 'ownerships#create_have'
+  delete 'destroy_have', to: 'ownerships#destroy_have'
 end
